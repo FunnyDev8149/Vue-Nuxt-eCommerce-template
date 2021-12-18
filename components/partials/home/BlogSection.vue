@@ -25,6 +25,25 @@
 					></post-one>
 				</div>
 			</swiper-carousel>
+			
+			<swiper-carousel
+				class="swiper-theme products-slider"
+				:options="productSlider"
+			>
+				<div
+					class="swiper-slide"
+					v-for="item in products"
+					overlay-class="overlay-zoom"
+					:key="`product-${item.slug}`"
+				>
+					<product-one
+						class="product-frame mb-4"
+						:product="item"
+						:showLarge="true"
+						btn-class="btn-underline btn-primary"
+					></product-one>
+				</div>
+			</swiper-carousel>
 		</div>
 	</section>
 </template>
